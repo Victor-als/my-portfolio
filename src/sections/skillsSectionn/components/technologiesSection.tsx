@@ -1,13 +1,11 @@
-import { useInView } from "../../../hooks/useInView";
+
 
 
 export function TechnologiesSection ( ) {
-  const { ref, isVisible } = useInView({ threshold: 0.6 });
 
   return (
-         <div className={`flex gap-12 flex-wrap transition-all duration-1000  ${
-          isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-20"
-          }`} ref={ref}>
+         <div className="flex gap-12 flex-wrap transition-all duration-1000"
+           >
             <div className="flex flex-col items-center justify-center gap-4"
                 
             >
