@@ -1,0 +1,65 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --animate-float: float 2.5s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  --shadow-glow: 0 0 12px rgba(99, 102, 241, 1);
+
+  @keyframes typewriter {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  animation: typewriter 2.5s steps(30) 1 forwards;
+}
+
+.typewriter::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.8px;
+  height: 100%;
+  background-color: #8b5cf6;
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+* {
+  font-smoothing: antialiased;
+}
+
+body {
+  background-color: #000000;
+  scroll-behavior: smooth;
+}
