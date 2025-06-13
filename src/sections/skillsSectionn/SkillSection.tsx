@@ -2,7 +2,7 @@ import { useInView } from "../../hooks/useInView";
 import { TechnologiesSection } from "./components/technologiesSection";
 
 export default function SkillSection() {
-  const { ref, isVisible } = useInView({ threshold: 0.5 });
+  const { ref, isVisible } = useInView({ threshold: 0.2});
 
   return (
     <section id="skills" className="mt-20" ref={ref}>
